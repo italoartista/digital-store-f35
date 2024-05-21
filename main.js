@@ -1,5 +1,14 @@
-import { produtos } from './api.js';
 
+/*
+    1. Importar a lista de produtos
+    2. Iterar sobre a lista de produtos
+    3. Para cada produto, criar um elemento HTML
+    4. Adicionar o produto ao elemento HTML
+    5. Adicionar o elemento HTML ao container de produtos
+    
+*/
+
+import { produtos } from './api.js';
 
 
 
