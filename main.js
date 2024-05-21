@@ -2,25 +2,34 @@ import { produtos } from './api.js';
 
 
 
-// ES5 
-// let nome = produtos[0].nome; 
-// let preco = produtos[0].preco;
-// let descricao = produtos[0].descricao;
-// let image = produtos[0].image;
-// let cor = produtos[0].detalhes.cor;
-// let tamanho = produtos[0].detalhes.tamanho;
-// let peso = produtos[0].detalhes.peso;
 
+produtos.forEach((produto) => {
 
-// ES6
-// Destructuring
-// let { nome, preco, descricao, image, detalhes: { cor, tamanho, peso } } = produtos[0];
+    
+    let { nome, descricao, preco, image, desconto } = produto;
+    const div = document.createElement('div');
+    div.className = 'produto';
+    
+    
+    div.innerHTML = `
+        <div class="card">
 
+            <img  src="${image}" alt="${nome}">
+            <div class="detalhes">
+                <h3>${nome}</h3>
+                <p>${descricao}</p>
+                <p>R$ ${preco}</p>
+                <p>Desconto: ${desconto}%</p>
+            </div>
+            <button>Comprar</button>
+        </div>
+    `;
 
-// console.log(nome, preco, descricao, image, cor, tamanho, peso); // Tenis 200 'Um tenis top de linha' './assets/produto.png' 'Preto' '42' '500g'
+    let rotuloDesconto = document.createElement('span');
+    rotuloDesconto.className = 'desconto';
+    rotuloDesconto.innerText = `-${desconto}%`;
 
-
-let { detalhes: { tamanho, cor }} = produtos[produtos.length-1];
-
-
-console.log(tamanho, cor); // M Preto
+    if(desconto > 0){
+        div.querySelector('.card').appendChild(rotuloDesconto);
+    }
+});

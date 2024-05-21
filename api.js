@@ -5,6 +5,7 @@ const produtos = [
         preco: 200.0,
         descricao: "Um tenis top de linha",
         image: './assets/produto.png',
+        desconto: 10,
         detalhes: { 
             cor: "Preto",
             tamanho: "42",
@@ -16,6 +17,7 @@ const produtos = [
         preco: 50.0,
         descricao: "Uma camiseta top de linha",
         image: './assets/produto.png',
+        desconto: 10,
         detalhes: { 
             cor: "Branco",
             tamanho: "M",
@@ -27,6 +29,7 @@ const produtos = [
         preco: 100.0,
         descricao: "Uma calça top de linha",
         image: './assets/produto.png',
+        desconto: 10,
         detalhes: { 
             cor: "Azul",
             tamanho: "42",
@@ -38,6 +41,7 @@ const produtos = [
         preco: 10.0,
         descricao: "Uma meia top de linha",
         image: './assets/produto.png',
+        desconto: 0,
         detalhes: { 
             cor: "Branco",
             tamanho: "M",
@@ -49,6 +53,7 @@ const produtos = [
         preco: 20.0,
         descricao: "Uma cueca top de linha",
         image: './assets/produto.png',
+        desconto: 30,
         detalhes: { 
             cor: "Preto",
             tamanho: "M",
